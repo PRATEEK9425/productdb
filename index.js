@@ -12,7 +12,7 @@ app.use(cors({
      origin:"*"
      }))
 app.use("/userlogin",LoginRoutes)
-app.use(Authmiddlewear)
+// app.use(Authmiddlewear)
 app.use("/product",ProductRouter)
 
 app.get("/",(req,res)=>{
