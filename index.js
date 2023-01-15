@@ -8,15 +8,15 @@ const app = express()
 
 
 app.use(express.json())
-// app.use(cors({
-//      origin:"*"
-//      }))
+app.use(cors({
+     origin:"*"
+     }))
 app.use("/userlogin",LoginRoutes)
-// app.use(Authmiddlewear)
+app.use(Authmiddlewear)
 app.use("/product",ProductRouter)
 
 app.get("/",(req,res)=>{
-    res.send("server running")
+    res.send("Home page")
 })
 
 app.listen(3500,async()=>{
